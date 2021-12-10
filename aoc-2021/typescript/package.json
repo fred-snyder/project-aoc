@@ -1,0 +1,18 @@
+{
+  "name": "aoc-2021-ts",
+  "version": "1.0.0",
+  "description": "Typescript solutions for AoC 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/fred-snyder/project-aoc"
+  },
+  "author": "Fred Snyder",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.11.12"
+  }
+}
