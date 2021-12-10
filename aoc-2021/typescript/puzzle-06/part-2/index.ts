@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 
-const puzzleInput = '../puzzle-input/input-p6.txt';
+const puzzleInput = '../../puzzle-input/input-p6.txt';
 const file = readFileSync(puzzleInput, 'utf-8');
 
 const inputFish: number[] = file.split(',').map((e) => {
@@ -56,11 +56,12 @@ class School {
 	}
 
 	// output all the fish cycles states
-	printCycles() {
+	printCycles(): number {
 		const fishCycles: number[] = this.fish.map((f: Fish) => {
 			return f.internalTimer;
 		});
 		console.log(fishCycles.length);
+		return fishCycles.length;
 	}
 }
 
@@ -77,3 +78,25 @@ function startCycles(days: number) {
 // start cycles with XX days
 startCycles(80);
 lanternSchool.printCycles();
+
+function moreCycles(days: number) {
+	for (let i = 81; i < days; i++) {
+		lanternSchool.cycleDay();
+	}
+}
+
+// start cycles with XX days
+moreCycles(120);
+lanternSchool.printCycles();
+
+function moreMoreCycles(days: number) {
+	for (let i = 121; i < days; i++) {
+		lanternSchool.cycleDay();
+	}
+}
+
+// start cycles with XX days
+moreMoreCycles(180);
+lanternSchool.printCycles();
+
+const population: number[] = [300, 300, 460, 600, 760, 1200, 2160, 3930, 7974, 17155];
