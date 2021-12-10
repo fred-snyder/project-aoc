@@ -3,7 +3,7 @@ import { readFileSync } from 'fs';
 const puzzleInput = '../../puzzle-input/input-p6.txt';
 const file = readFileSync(puzzleInput, 'utf-8');
 
-const inputFish: number[] = file.split(',').map((e) => {
+const inputFish: number[] = file.split(',').map((e: string) => {
 	return parseInt(e);
 });
 
@@ -76,27 +76,7 @@ function startCycles(days: number) {
 }
 
 // start cycles with XX days
-startCycles(80);
-lanternSchool.printCycles();
-
-function moreCycles(days: number) {
-	for (let i = 81; i < days; i++) {
-		lanternSchool.cycleDay();
-	}
-}
-
-// start cycles with XX days
-moreCycles(120);
-lanternSchool.printCycles();
-
-function moreMoreCycles(days: number) {
-	for (let i = 121; i < days; i++) {
-		lanternSchool.cycleDay();
-	}
-}
-
-// start cycles with XX days
-moreMoreCycles(180);
+startCycles(256);
 lanternSchool.printCycles();
 
 const population: number[] = [300, 300, 460, 600, 760, 1200, 2160, 3930, 7974, 17155];
