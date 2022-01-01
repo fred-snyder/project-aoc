@@ -1,5 +1,3 @@
 # Advent of Code 2021
 
-First 5 puzzles: Go/Golang
-
-The remaining: Typescript
+First 6 puzzles: Go/Golang
